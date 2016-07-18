@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.save
       # Deliver the signup email
       UserNotifierMailer.send_signup_email(@user).deliver
-      redirect_to(root_path, :notice => 'User created')
+      redirect_to(new_user_session_path, :notice => 'User created')
     else
       render :action => 'new'
     end
