@@ -3,20 +3,20 @@
   <head>
     <title>Blog</title>
 
-    <%#= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
 
-    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    */
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
 
 
     <div id=container>
-    <%= render 'shared/navbar' %>
+      <%= render "shared/navbar" %>
 
-      <div id=user_nav>
+      <div>
   	    <% if user_signed_in? %>
   	      <p> Logged in as <strong><%= current_user.email %></strong>. </p>
   	      <%= link_to "Edit Profile", edit_user_registration_path %> |
