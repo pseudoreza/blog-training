@@ -2,16 +2,21 @@
 <html>
   <head>
     <title>Blog</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-  	<div id=container>
 
-      <div id=user_nav>
+
+    <div id=container>
+      <%= render "shared/navbar" %>
+
+      <div>
   	    <% if user_signed_in? %>
   	      <p> Logged in as <strong><%= current_user.email %></strong>. </p>
   	      <%= link_to "Edit Profile", edit_user_registration_path %> |
