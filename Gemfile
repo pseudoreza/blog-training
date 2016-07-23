@@ -55,3 +55,5 @@ gem 'bootstrap-sass', '~> 3.3.6'
 #fileuploading
 gem 'carrierwave'
 gem 'rmagick'
+#editor
+gem 'tinymce-rails'
