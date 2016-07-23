@@ -57,3 +57,5 @@ gem 'carrierwave'
 gem 'rmagick'
 #editor
 gem 'tinymce-rails'
+#permalink
+gem 'friendly_id'
